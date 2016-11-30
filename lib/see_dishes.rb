@@ -1,2 +1,2 @@
-class Dishes
-end
+# class Dishes
+# end
