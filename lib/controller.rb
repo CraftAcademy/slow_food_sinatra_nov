@@ -55,7 +55,9 @@ class SlowFood < Sinatra::Base
   end
 
   post '/Add-to-basket' do
-    # Needs an if-statement!
+    current_order = Order.create
+    dish = dish.find(id: 2142414) #random
+    current_order.add_dish_to_order(dish)
     flash[:success] = "added to basket"
     redirect '/'
   end

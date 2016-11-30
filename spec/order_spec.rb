@@ -6,4 +6,10 @@ describe Order do
   it{is_expected.to have_property :pickup_time}
   it{is_expected.to have_many :dishes}
 
+  desribe "Adding a dish to basket" do
+    subject.add_dish_to_order(dish)
+    it{is_}
+
+  end
+
 end
