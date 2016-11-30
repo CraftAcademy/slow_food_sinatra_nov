@@ -1,4 +1,4 @@
-Testing git pair programing
+Testing git pair programing. Philip read this
 
 ### SlowFood (Sinatra)
 
