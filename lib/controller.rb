@@ -54,6 +54,11 @@ class SlowFood < Sinatra::Base
     erb :index
   end
 
+  post '/Add-to-basket' do
+    flash[:success] = "added to basket"
+    redirect '/'
+  end
+
   get '/auth/login' do
     erb :login
   end
