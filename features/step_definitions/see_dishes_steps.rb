@@ -7,7 +7,7 @@ Then(/^I should see the page$/) do
 end
 
 Then(/^I see "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content arg1
 end
 
 Then(/^I see the price of "([^"]*)"$/) do |arg1|
