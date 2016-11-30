@@ -1,4 +1,4 @@
-# require '.lib/see_dishes.rb'
+require './lib/see_dishes.rb'
 
 describe Dishes do
 
