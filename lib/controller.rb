@@ -55,6 +55,7 @@ class SlowFood < Sinatra::Base
   end
 
   post '/Add-to-basket' do
+    # Needs an if-statement!
     flash[:success] = "added to basket"
     redirect '/'
   end
