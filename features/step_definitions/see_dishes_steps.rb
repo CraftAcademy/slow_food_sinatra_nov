@@ -1,5 +1,5 @@
 When(/^I visit the dishes page$/) do
-  visit '/'
+  visit '/dishes'
 end
 
 Then(/^I should see the page$/) do
