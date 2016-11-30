@@ -3,6 +3,7 @@ class Dish
 
   property :id, Serial, key: true
   property :name, String, length: 128
+  property :price, Float, key: true
 
-  
+
 end
