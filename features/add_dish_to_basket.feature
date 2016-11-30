@@ -5,5 +5,5 @@ Feature: As a Visitor
 
 Scenario: Visitor adds dish to basket
   When I visit the site
-  And I click "Add" on a "Dish"
+  And I click "Add"
   Then I should see "added to basket"

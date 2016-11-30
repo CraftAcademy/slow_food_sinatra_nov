@@ -2,10 +2,10 @@ When(/^I visit the site$/) do
   visit '/'
 end
 
-When(/^I click "([^"]*)" on a "([^"]*)"$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^I click "([^"]*)"$/) do |add_button|
+  click_button add_button
 end
 
-Then(/^I should see "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see "([^"]*)"$/) do |message_added|
+  expect(page).to have_content message_added
 end
