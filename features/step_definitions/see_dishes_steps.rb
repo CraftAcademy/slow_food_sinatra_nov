@@ -1,5 +1,5 @@
 When(/^I visit the dishes page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit '/'
 end
 
 Then(/^I see "([^"]*)"$/) do |arg1|
