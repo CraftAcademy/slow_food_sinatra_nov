@@ -1,9 +1,14 @@
-# require './lib/see_dishes.rb'
-#
-# describe Dishes do
-#
-#   it "is expected to show 'Main Courses' on initialize" do
-#     expect
-#   end
-#
-# end
+require './lib/models/dish.rb'
+
+describe Dish do
+  before do
+    subject = Dish.new
+  end
+
+  it "is expected to have a name" do
+    subject.name = 'Meatballs'
+    subject.save
+    expect(Dish.first.name).to eq 'Meatballs'
+  end
+
+end
