@@ -5,6 +5,7 @@ end
 Given(/^I have a dish called "([^"]*)"$/) do |arg1|
   dish1 = Dish.new
   dish1.name = "Meatballs"
+  dish1.save
 end
 
 Then(/^I should see the page$/) do
