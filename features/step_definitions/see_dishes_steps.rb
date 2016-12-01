@@ -22,5 +22,5 @@ Then(/^I see the price of "([^"]*)"$/) do |price|
 end
 
 Then(/^I see "([^"]*)" button$/) do |button|
- expect(page).to have_content button
+ expect(page).to have_button button
 end
