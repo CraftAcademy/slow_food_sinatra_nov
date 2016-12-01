@@ -59,8 +59,12 @@ class SlowFood < Sinatra::Base
   end
 
   post '/checkout' do
+    # if Order.last.amount == nil
     flash[:error] = "Your basket is empty"
-  end
+  # else
+  #   flash[:success] = "Yor basket is not empty"
+  # end
+end
 
   get '/auth/login' do
     erb :login
