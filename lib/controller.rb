@@ -51,20 +51,16 @@ class SlowFood < Sinatra::Base
   end
 
   get '/' do
+    @dishes = Dish.all
     erb :index
   end
 
-  post '/Add-to-basket' do
+  post '/add-to-basket' do
     current_order = Order.create
-    dish = dish.find(id: 2142414) #random
-    current_order.add_dish_to_order(dish)
+    chosen_dish = dish.find(id: 1)
+    current_order.add_dish_to_order(chosen_dish)
     flash[:success] = "added to basket"
     redirect '/'
-  end
-
-  get '/dishes' do
-    @dishes = Dish.all
-    erb :dishes
   end
 
   get '/auth/login' do

@@ -4,10 +4,19 @@
 <title>Testing button</title>
 </head>
 <body>
-  <div>
-    <form method="post" action="/Add-to-basket">
-    <input class="btn btn-primary" type="submit" value="Add">
-    </form>
-  </div>
+  Main Courses
+  <% @dishes.each do |dish| %>
+  <form class="form" action="/add-to-basket" method="post">
+  <%= dish.name %>: $<%= dish.price %>
+<input class="btn btn-primary" id="button_<%= dish.id %>" type="submit" value="Add to Order">
+</form>
+  <br />
+  <% end %>
+
+
+  <form class="form" action="index.html" method="post">
+    <input type="button" name="checkout" id="checkout" value="CHECKOUT" />
+  </form>
+
 </body>
 </html>

@@ -5,10 +5,10 @@ class Order
   property :amount, Float
   property :pickup_time, Time
 
-  # has n, :dishes
+  has n, :order_items
 
 def add_dish_to_order(dish)
-  self.update(:dishes => (dish))
+  self.update(:order_items => (dish))
 end
   # def add_amount_to_basket(dish)
   # self.amount += dish.price
