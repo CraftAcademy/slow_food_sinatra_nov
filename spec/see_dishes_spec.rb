@@ -7,7 +7,7 @@ describe Dish do
     subject.name = 'Meatballs'
     subject.price = 8.99
     subject.save
-    
+
   end
 
   it "is expected to have a name" do
@@ -15,7 +15,8 @@ describe Dish do
 
   end
 
-it "is expected to have a price" do
-expect(Dish.first.price).to eq 8.99
+  it "is expected to have a price" do
+    expect(Dish.first.price).to eq 8.99
   end
+  
 end

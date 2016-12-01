@@ -5,5 +5,4 @@ class Dish
   property :name, String, length: 100
   property :price, Float
 
-
 end
