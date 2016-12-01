@@ -10,6 +10,7 @@ describe Dish do
   end
 
   it "is expected to have a name" do
+    binding.pry
     expect(Dish.first.name).to eq 'Meatballs'
   end
 
