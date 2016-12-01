@@ -2,6 +2,11 @@ When(/^I visit the dishes page$/) do
   visit '/dishes'
 end
 
+Given(/^I have a dish called "([^"]*)"$/) do |arg1|
+  dish1 = Dish.new
+  dish1.name = "Meatballs"
+end
+
 Then(/^I should see the page$/) do
   save_and_open_page
 end
