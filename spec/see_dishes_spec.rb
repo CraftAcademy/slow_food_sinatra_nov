@@ -7,7 +7,6 @@ describe Dish do
     subject.name = 'Meatballs'
     subject.price = 8.99
     subject.save
-
   end
 
   it "is expected to have a name" do
