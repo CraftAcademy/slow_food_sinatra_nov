@@ -7,9 +7,8 @@ Feature: As a visitor
 
   Scenario: Visitor see dishes
     When I visit the dishes page
-    # Then I should see the page
     Then I see "Main Courses"
     And I see "Meatballs"
     And I see the price of "$8.99"
-    And I see "Add to" button
+    And I see "Add to Order" button
     Then I see "CHECKOUT" button

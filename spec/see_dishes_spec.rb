@@ -10,11 +10,11 @@ describe Dish do
   end
 
   it "is expected to have a name" do
-    expect(subject.first.name).to eq 'Meatballs'
+    expect(Dish.last.name).to eq 'Meatballs'
   end
 
   it "is expected to have a price" do
-    expect(subject.first.price).to eq 8.99
+    expect(Dish.last.price).to eq 8.99
   end
 
 end
