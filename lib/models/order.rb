@@ -7,8 +7,8 @@ class Order
 
   has n, :order_items
 
-def add_dish_to_order(dish)
-  self.update(:order_items => (dish))
+def add_dish_to_order()
+  self.order_items.create(dish: Dish.first)
 end
   # def add_amount_to_basket(dish)
   # self.amount += dish.price

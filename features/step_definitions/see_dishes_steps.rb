@@ -6,7 +6,6 @@ Given(/^I have a dish called "([^"]*)" with price "([^"]*)"$/) do |name, price|
   dish = Dish.new
   dish.name = name
   dish.price = price
-    binding.pry
   dish.save
 end
 

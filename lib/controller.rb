@@ -51,18 +51,21 @@ class SlowFood < Sinatra::Base
   end
 
   get '/' do
-    binding.pry
     @dishes = Dish.all
     erb :index
   end
 
   post '/add-to-basket' do
     current_order = Order.create
-    chosen_dish = dish.find(id: 1)
-    current_order.add_dish_to_order(chosen_dish)
+    binding.pry
+    current_order.add_dish_to_order
+    if current_order.order_items != []
     flash[:success] = "added to basket"
-    redirect '/'
+  else
+    flash[:error] = "coult not add to basket"
   end
+  redirect '/'
+end
 
   get '/auth/login' do
     erb :login
