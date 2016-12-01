@@ -4,5 +4,4 @@ class Dish
   property :id, Serial, key: true
   property :name, String, length: 100
   property :price, Float
-  binding.pry
 end
