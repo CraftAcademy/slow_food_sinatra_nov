@@ -1,2 +1,8 @@
 Main Courses
-<%= @dishes %>
+<% @dishes.each do |dish| %>
+<%= dish.name %>: $<%= dish.price %>
+<form class="form" action="index.html" method="post">
+  <input type="button" name="addto" id="addto" value="Add to" />
+</form>
+<br />
+<% end %>

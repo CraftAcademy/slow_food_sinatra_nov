@@ -3,8 +3,7 @@ Feature: As a visitor
   I need to be able to see a menu with dishes
 
   Background:
-    Given I have a dish called "Meatballs"
-
+    Given I have a dish called "Meatballs" with price "8.99"
 
   Scenario: Visitor see dishes
     When I visit the dishes page
