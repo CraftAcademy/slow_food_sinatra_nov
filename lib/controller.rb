@@ -51,6 +51,7 @@ class SlowFood < Sinatra::Base
   end
 
   get '/' do
+    binding.pry
     @dishes = Dish.all
     erb :index
   end

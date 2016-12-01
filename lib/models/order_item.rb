@@ -2,11 +2,11 @@ class OrderItem
   include DataMapper::Resource
 
   property :id, Serial, key: true
-  property :dish_id, Integer
+  #property :dish_id, Integer
 
-  has n, :dishes, through: Resource
+  #has 1, :dish, through: Resource
+  belongs_to :dish
+  belongs_to :order
 
-  def set_dish_id(dish)
-    dish_id = dish.id
-  end
+  
 end
