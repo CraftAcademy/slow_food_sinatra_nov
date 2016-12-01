@@ -15,8 +15,8 @@ Then(/^I should be on the Checkout page$/) do
   expect(page).to have_current_path('/checkout')
 end
 
-Then(/^I should see "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see "([^"]*)"$/) do |empty_basket_message|
+  expect(page).to have_content empty_basket_message
 end
 
 Given(/^that I have chosen a dish$/) do

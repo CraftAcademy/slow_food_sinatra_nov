@@ -58,6 +58,10 @@ class SlowFood < Sinatra::Base
     erb :checkout
   end
 
+  post '/checkout' do
+    flash[:error] = "Your basket is empty"
+  end
+
   get '/auth/login' do
     erb :login
   end
