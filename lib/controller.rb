@@ -57,7 +57,6 @@ class SlowFood < Sinatra::Base
 
   post '/add-to-basket' do
     current_order = Order.create
-    binding.pry
     current_order.add_dish_to_order
     if current_order.order_items != []
     flash[:success] = "added to basket"

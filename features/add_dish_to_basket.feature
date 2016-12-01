@@ -4,7 +4,7 @@ Feature: As a Visitor
 
   Background:
     Given I have a dish called "Meatballs" with price "8.99"
-    
+
   Scenario: Visitor adds dish to basket
     When I visit the site
     And I click "Add to Order"
