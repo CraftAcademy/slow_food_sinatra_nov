@@ -54,6 +54,10 @@ class SlowFood < Sinatra::Base
     erb :index
   end
 
+  get '/checkout' do
+    erb :checkout
+  end
+
   get '/auth/login' do
     erb :login
   end

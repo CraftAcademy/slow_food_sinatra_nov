@@ -2,16 +2,17 @@ When(/^I visit the site$/) do
   visit '/'
 end
 
-Given(/^that I havn't chosen a dish$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+Given(/^that I don't see "([^"]*)"$/) do |message_addded|
+expect(page).not_to have_content message_addded
 end
 
-Given(/^I click "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+
+Given(/^I click "([^"]*)"$/) do |check_out_button|
+  click_button check_out_button
 end
 
 Then(/^I should be on the Checkout page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_current_path('/checkout')
 end
 
 Then(/^I should see "([^"]*)"$/) do |arg1|
