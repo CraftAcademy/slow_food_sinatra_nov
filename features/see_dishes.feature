@@ -2,6 +2,10 @@ Feature: As a visitor
   In order to choose dishes
   I need to be able to see a menu with dishes
 
+  Background:
+    Given I have a dish called "Meatballs"
+
+
   Scenario: Visitor see dishes
     When I visit the dishes page
     # Then I should see the page
