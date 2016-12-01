@@ -62,6 +62,11 @@ class SlowFood < Sinatra::Base
     redirect '/'
   end
 
+  get '/dishes' do
+    @dishes = Dish.all
+    erb :dishes
+  end
+
   get '/auth/login' do
     erb :login
   end
