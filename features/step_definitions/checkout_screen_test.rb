@@ -11,14 +11,10 @@ Then(/^I should be on the Checkout page$/) do
   expect(page).to have_current_path('/checkout')
 end
 
-Then(/^I should see my dish$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 Then(/^I shold see a total amount of "([^"]*)"$/) do |price|
   expect(page).to have_content price
 end
 
-Then(/^I should see a "([^"]*)" button$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see a "([^"]*)" button$/) do |button|
+  expect(page).to have_button button
 end
