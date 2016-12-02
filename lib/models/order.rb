@@ -5,12 +5,5 @@ class Order
   property :amount, Float
   property :pickup_time, Time
 
-  has n, :order_items
-
-def add_dish_to_order()
-  self.order_items.create(dish: Dish.first)
-end
-  # def add_amount_to_basket(dish)
-  # self.amount += dish.price
-# end
+  has n, :order_items, constraint: :destroy
 end

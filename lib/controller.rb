@@ -67,10 +67,8 @@ class SlowFood < Sinatra::Base
     if current_order.order_items.create(dish: dish)
       flash[:success] = "added to basket"
     else
-      flash[:error] = "coult not add to basket"
+      flash[:error] = "could not add to basket"
     end
-    #binding.pry
-
   redirect '/'
 end
 
