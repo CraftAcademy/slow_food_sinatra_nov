@@ -63,8 +63,9 @@ class SlowFood < Sinatra::Base
     else
       @current_order.order_items.each do |order_item|
         @total = @total + order_item.dish.price
-        @total
+        binding.pry
       end
+      binding.pry
       erb :checkout
     end
   end
