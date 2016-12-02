@@ -7,16 +7,8 @@ expect(page).not_to have_content message_addded
 end
 
 
-Given(/^I click "([^"]*)"$/) do |check_out_button|
-  click_button check_out_button
-end
-
 Then(/^I should be on the Checkout page$/) do
   expect(page).to have_current_path('/checkout')
-end
-
-Then(/^I should see "([^"]*)"$/) do |empty_basket_message|
-  expect(page).to have_content empty_basket_message
 end
 
 Given(/^that I have chosen a dish$/) do

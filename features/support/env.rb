@@ -26,3 +26,9 @@ DatabaseCleaner.strategy = :truncation
 Around do |_scenario, block|
   DatabaseCleaner.cleaning(&block)
 end
+
+Warden.test_mode!
+World Warden::Test::Helpers
+After {
+  Warden.test_reset!
+}
