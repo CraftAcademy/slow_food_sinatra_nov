@@ -55,17 +55,14 @@ class SlowFood < Sinatra::Base
     erb :index
   end
 
-  get '/checkout' do
-    erb :checkout
-  end
-
   post '/checkout' do
-    # if Order.last.amount == nil
-    flash[:error] = "Your basket is empty"
-  # else
-  #   flash[:success] = "Yor basket is not empty"
-  # end
-end
+    @current_order = Order.get(session[:order_id])
+    if @current_order.nil?
+      flash[:error] = "Your basket is empty"
+    else
+      erb :checkout
+    end
+  end
 
   post '/add-to-basket' do
     if session[:order_id]
