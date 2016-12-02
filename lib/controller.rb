@@ -56,13 +56,21 @@ class SlowFood < Sinatra::Base
   end
 
   post '/add-to-basket' do
-    current_order = Order.create
-    current_order.add_dish_to_order
-    if current_order.order_items != []
-    flash[:success] = "added to basket"
-  else
-    flash[:error] = "coult not add to basket"
-  end
+    if session[:order_id]
+      current_order = Order.get(session[:order_id])
+    else
+      current_order = Order.create
+    end
+    session[:order_id] = current_order.id
+    dish = Dish.get(params[:dish_id])
+
+    if current_order.order_items.create(dish: dish)
+      flash[:success] = "added to basket"
+    else
+      flash[:error] = "coult not add to basket"
+    end
+    #binding.pry
+
   redirect '/'
 end
 
