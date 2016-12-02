@@ -11,10 +11,6 @@ Then(/^I should be on the Checkout page$/) do
   expect(page).to have_current_path('/checkout')
 end
 
-Given(/^that I have chosen a dish$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 Then(/^I should see my dish$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
