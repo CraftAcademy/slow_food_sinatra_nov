@@ -15,8 +15,8 @@ Then(/^I should see my dish$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then(/^I shold see a total amount$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I shold see a total amount of "([^"]*)"$/) do |price|
+  expect(page).to have_content price
 end
 
 Then(/^I should see a "([^"]*)" button$/) do |arg1|
