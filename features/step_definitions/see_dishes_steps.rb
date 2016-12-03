@@ -6,5 +6,5 @@ Given(/^I have a dish called "([^"]*)" with price "([^"]*)"$/) do |name, price|
 end
 
 Then(/^I should see "([^"]*)" button$/) do |button|
- expect(page).to have_button button
+  expect(page).to have_button button
 end

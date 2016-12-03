@@ -18,7 +18,7 @@ Given(/^the following dishes exists$/) do |table|
 end
 
 Given(/^that I don't see "([^"]*)"$/) do |message_addded|
-expect(page).not_to have_content message_addded
+  expect(page).not_to have_content message_addded
 end
 
 Given(/^I have no dishes in my basket$/) do
