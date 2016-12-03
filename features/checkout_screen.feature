@@ -3,8 +3,10 @@ Feature: As a Visitor
   I need to checkout
 
   Background:
-    Given I have a dish called "Meatballs" with price "8.99"
-    And I have a dish called "Salad" with price "4.99"
+    Given the following dishes exists
+    | name        | price  |
+    | "Meatballs" | "8.99" |
+    | "Salad"     | "4.99" |
 
 Scenario: Visitor clicks check_out button with no added dishes
   When I visit the site
