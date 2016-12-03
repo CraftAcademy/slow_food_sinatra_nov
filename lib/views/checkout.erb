@@ -2,7 +2,7 @@
   <p><%= order_item.dish.name %> - $<%= order_item.dish.price %></p>
 <% end %>
 
-<p>Total: $<%=@total%></p>
+<p>Total: $<%="%.2f" % @total%></p>
 
 <div>
   <input class="btn btn-primary" type="submit" value="Buy now!">
