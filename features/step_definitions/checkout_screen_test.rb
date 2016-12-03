@@ -29,7 +29,7 @@ Then(/^I should be on the Checkout page$/) do
   expect(page).to have_current_path('/checkout')
 end
 
-Then(/^I shold see a total amount of "([^"]*)"$/) do |price|
+Then(/^I shold see a dish price of "([^"]*)"$/) do |price|
   expect(page).to have_content price
 end
 
