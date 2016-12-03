@@ -8,14 +8,14 @@ Feature: As a Visitor
     | "Meatballs" | "8.99" |
     | "Salad"     | "4.99" |
 
-Scenario: Visitor clicks check_out button with no added dishes
-  Given I am on the index page
-  And I have no dishes in my basket
-  And I click "Checkout"
-  Then I should be on the index page
-  Then I should see "Your basket is empty"
+  Scenario: Visitor clicks check_out button with no added dishes
+    Given I am on the index page
+    And I have no dishes in my basket
+    And I click "Checkout"
+    Then I should be on the index page
+    Then I should see "Your basket is empty"
 
-Scenario: Visitor clicks check_out button with added dishes
+  Scenario: Visitor clicks check_out button with added dishes
     When I am on the index page
     And I have a dish in my order
     And I click "Checkout"
