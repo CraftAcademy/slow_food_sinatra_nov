@@ -20,5 +20,5 @@ Scenario: Visitor clicks check_out button with added dishes
     Then I should be on the Checkout page
     And I should see "Salad"
     And I shold see a total amount of "4.99"
-    And I should see "Total: 4.99"
+    And I should see "Total: $4.99"
     And I should see a "Buy now!" button
