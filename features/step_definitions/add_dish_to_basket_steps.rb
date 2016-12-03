@@ -1,5 +1,5 @@
-When(/^I click "([^"]*)"$/) do |add_button|
-  click_button add_button
+When(/^I click "([^"]*)"$/) do |button|
+  click_button button
 end
 
 Then(/^I should see "([^"]*)"$/) do |content|
