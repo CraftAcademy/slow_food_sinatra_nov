@@ -1,3 +1,11 @@
+Given(/^I am on the index page$/) do
+  visit '/'
+end
+
+Then(/^I should be on the index page$/) do
+  expect(page).to have_current_path('/')
+end
+
 When(/^I visit the site$/) do
   visit '/'
 end
@@ -13,6 +21,9 @@ Given(/^that I don't see "([^"]*)"$/) do |message_addded|
 expect(page).not_to have_content message_addded
 end
 
+Given(/^I have no dishes in my basket$/) do
+  expect(@current_order).to be nil
+end
 
 Then(/^I should be on the Checkout page$/) do
   expect(page).to have_current_path('/checkout')

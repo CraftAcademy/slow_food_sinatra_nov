@@ -59,6 +59,7 @@ class SlowFood < Sinatra::Base
     @current_order = Order.get(session[:order_id])
     @total = 0
     if @current_order.nil?
+      redirect '/'
       flash[:error] = "Your basket is empty"
     else
       @current_order.order_items.each do |order_item|

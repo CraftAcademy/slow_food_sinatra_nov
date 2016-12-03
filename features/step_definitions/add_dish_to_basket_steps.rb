@@ -2,10 +2,9 @@ When(/^I click "([^"]*)"$/) do |add_button|
   click_button add_button
 end
 
-Then(/^I should see "([^"]*)"$/) do |message_added|
-  expect(page).to have_content message_added
+Then(/^I should see "([^"]*)"$/) do |content|
+  expect(page).to have_content content
 end
-
 
 When(/^I have a dish in my order$/) do
   steps %q{
@@ -13,7 +12,6 @@ When(/^I have a dish in my order$/) do
     Then I should see "added to basket"
   }
 end
-
 
 Then(/^I should have "([^"]*)" dishes on my order$/) do |count|
   order = Order.last

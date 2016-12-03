@@ -9,14 +9,14 @@ Feature: As a Visitor
     | "Salad"     | "4.99" |
 
 Scenario: Visitor clicks check_out button with no added dishes
-  When I visit the site
-  Given that I don't see "added to basket"
+  Given I am on the index page
+  And I have no dishes in my basket
   And I click "Checkout"
-  Then I should be on the Checkout page
-  And I should see "Your basket is empty"
+  Then I should be on the index page
+  Then I should see "Your basket is empty"
 
 Scenario: Visitor clicks check_out button with added dishes
-    When I visit the site
+    When I am on the index page
     And I have a dish in my order
     And I click "Checkout"
     Then I should be on the Checkout page
