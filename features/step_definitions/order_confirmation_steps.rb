@@ -17,7 +17,7 @@ end
 
 
 Then(/^I should be on the order confirmation page$/) do
-  expect(page).to have_current_path('/order_confirmation')
+  expect(page).to have_current_path '/order_confirmation'
 end
 
 Then(/^I should see a pick up time 30 minutes from now$/) do
