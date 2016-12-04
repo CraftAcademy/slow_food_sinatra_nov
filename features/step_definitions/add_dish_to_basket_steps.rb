@@ -9,7 +9,7 @@ end
 When(/^I have a dish in my order$/) do
   steps %q{
     When I click "Add to Order" for "Salad"
-    Then I should see "added to basket"
+    Then I should see "added to order"
   }
 end
 

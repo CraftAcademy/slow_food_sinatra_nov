@@ -21,10 +21,6 @@ Given(/^that I don't see "([^"]*)"$/) do |message_addded|
   expect(page).not_to have_content message_addded
 end
 
-Given(/^I have no dishes in my basket$/) do
-  expect(@current_order).to be nil
-end
-
 Then(/^I should be on the Checkout page$/) do
   expect(page).to have_current_path('/checkout')
 end

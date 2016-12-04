@@ -10,10 +10,9 @@ Feature: As a Visitor
 
   Scenario: Visitor clicks check_out button with no added dishes
     Given I am on the index page
-    And I have no dishes in my basket
     And I click "Checkout"
     Then I should be on the index page
-    Then I should see "Your basket is empty"
+    Then I should see "Your order is empty"
 
   Scenario: Visitor clicks check_out button with added dishes
     When I am on the index page

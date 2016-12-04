@@ -59,7 +59,7 @@ class SlowFood < Sinatra::Base
     @current_order = Order.get(session[:order_id])
     @total = 0
     if @current_order.nil?
-      flash[:error] = "Your basket is empty"
+      flash[:error] = "Your order is empty"
       redirect '/'
     else
       @current_order.order_items.each do |order_item|
@@ -70,7 +70,7 @@ class SlowFood < Sinatra::Base
     end
   end
 
-  post '/add-to-basket' do
+  post '/add-to-order' do
     if session[:order_id]
       current_order = Order.get(session[:order_id])
     else
@@ -80,9 +80,9 @@ class SlowFood < Sinatra::Base
     dish = Dish.get(params[:dish_id])
 
     if current_order.order_items.create(dish: dish)
-      flash[:success] = "added to basket"
+      flash[:success] = "added to order"
     else
-      flash[:error] = "could not add to basket"
+      flash[:error] = "could not add to order"
     end
   redirect '/'
 end
