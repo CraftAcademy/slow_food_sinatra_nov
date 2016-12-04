@@ -3,10 +3,10 @@ Feature: As a Visitor.
   After clicking buy now, I would like to see an order confirmation with estimated pick up time.
 
   Background:
-  Given I have a dish in my order and I am on the checkout_screen
+    Given I have a dish in my order and I am on the checkout_screen
 
   Scenario: Visitor clicks Buy now! and is taken to a order confirmation page with pick-up time.
-  When I click "Buy now!"
-  Then I should be on the order confirmation page
-  And I should see "Thank you for your order! Your food will be ready for pick up at"
-  And I should see a pick up time 30 minutes from now
+    When I click "Buy now!"
+    Then I should be on the order confirmation page
+    And I should see "Thank you for your order! Your food will be ready for pick up at"
+    And I should see a pick up time 30 minutes from now
